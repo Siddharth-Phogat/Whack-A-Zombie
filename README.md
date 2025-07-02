@@ -26,7 +26,7 @@ A spooky, fast-paced browser game built with **HTML**, **CSS**, and **JavaScript
 ---
 
 ## 📸 Screenshots
-![alt text](<assests/images/Screenshot (72).png>) ![alt text](<assests/images/Screenshot (74).png>) ![alt text](<assests/images/Screenshot (70).png>) ![alt text](<assests/images/Screenshot (71).png>)
+![alt text](</assests/images/Screenshot%20(72).png>) ![alt text](</assests/images/Screenshot%20(74).png>) ![alt text](</assets/images/Screenshot%20(70).png>) ![alt text](</assests/images/Screenshot%20(71).png>)
 ---
 
 ## 📁 Project Structure
