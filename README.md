@@ -25,6 +25,9 @@ A spooky, fast-paced browser game built with **HTML**, **CSS**, and **JavaScript
 
 ---
 
+## 📸 Screenshots
+!(<Screenshot (72).png>) !(<Screenshot (74).png>) !(<Screenshot (70).png>) !(<Screenshot (71).png>)
+
 ## 📁 Project Structure
 
 Whack-A-Zombie/
