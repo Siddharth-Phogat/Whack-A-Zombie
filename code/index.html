@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-A-Zombie</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/gothic-era" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="texture"></div>
+
+        <div class="main-container">
+            <div class="left-space"></div>
+
+            <!-- Left Div -->
+            <div class="leftDiv">
+                <div class="info-container">
+                    <div class="scorebox">
+                    <h2>Score:</h2>
+                    <h2 id="score">0</h2>
+                    </div>
+        
+                    <div class="timebox">
+                    <h2>Time-Left:</h2>
+                    <h2 id="time-left">60s</h2>
+                    </div>
+        
+                    <div class="livebox">
+                    <h2>Lives:</h2>
+                    <h2 id="lives-left">3</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Left Div Over -->
+
+
+            <!-- Center Div -->
+            <div class="center-container">
+                <div class="game-over-overlay hidden">
+                    <div class="game-over-content">
+                        <h1 id="game-over-message">Game Over</h1>
+                        <div id="final-score">Final Score: 0</div>
+                        <button class="restart-button">~Go Back~</button>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <img src="../assets/images/jumpScareZombie.png" alt="Jumpscare Zombie" id="jumpscareZombie" class="jumpscare-zombie">
+                    <img src="../assets/images/jumpScareZombie2.png" alt="Jumpscare Zombie 2" id="jumpscareZombie2" class="jumpscare-zombie-2">
+                    <img src="../assets/images/jumpScareZombie3.png" alt="Jumpscare Zombie 3" id="jumpscareZombie3" class="jumpscare-zombie-3">
+
+                    <!-- Card 1-5 -->
+                    <p id="image1" class="square"></p>
+                    <p id="image2" class="square"></p>
+                    <p id="image3" class="square"></p>
+                    <p id="image4" class="square"></p>
+                    <p id="image5" class="square"></p>
+
+                    <!-- Card 6-10 -->
+                    <p id="image6" class="square"></p>
+                    <p id="image7" class="square"></p>
+                    <p id="image8" class="square"></p>
+                    <p id="image9" class="square"></p>
+                    <p id="image10" class="square"></p>
+
+
+                    <!-- Card 11-15 -->
+                    <p id="image11" class="square"></p>
+                    <p id="image12" class="square"></p>
+                    <p id="image13" class="square"></p>
+                    <p id="image14" class="square"></p>
+                    <p id="image15" class="square"></p>
+
+                    <!-- Card 16-20 -->
+                    <p id="image16" class="square"></p>
+                    <p id="image17" class="square"></p>
+                    <p id="image18" class="square"></p>
+                    <p id="image19" class="square"></p>
+                    <p id="image20" class="square"></p>
+                </div>
+                <div class="center-down">
+                    <div class="rulebox">
+                        <h2>
+                            <a class="rulesLink" href="./rules.html">~Rules~</a>
+                        </h2>
+                    </div>
+                    <div class="startDiv">
+                        <button class="start-button" type="button">Start Game</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Center Div Over -->
+
+
+            <!-- Right Div -->
+            <div class="rightDiv">
+                <div class="gun-toggle-box">
+                    <div class="gun-toggle-label">Gun Element</div>
+                    <div class="gun-toggle"></div>
+                </div>
+                <div class="dark-mode-box">
+                    <div class="dark-mode-label">Dark-Mode</div>
+                    <div class="dark-mode"></div>
+                </div>
+                <div class="flicker-box">
+                    <div class="flicker-label">Toggle Flickering</div>
+                    <div class="flicker-mode"></div>
+                </div>
+            </div>
+            <!-- Right Div Over -->
+
+            <div class="right-space"></div>
+
+        </div>
+    </div>
+
+
+    <script src="javascript.js"></script>
+</body>
+</html>

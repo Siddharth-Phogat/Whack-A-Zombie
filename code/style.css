@@ -1,0 +1,483 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../assets/images/background.png);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.rightDiv{
+    font-family: 'Gothic Era', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    z-index:3000;
+}
+.rulebox{
+    font-family: 'Gothic Era', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    color: aliceblue;
+}
+.rulesLink:link {
+    text-decoration: none;
+    color: aliceblue;
+    text-shadow: #4CBB17 0px 5px 15px;
+}
+.rulesLink:hover {
+    transition-property: all;
+    text-decoration: none;
+    font-size: 2.2rem;
+    transition: 0.3s ease-in-out;
+}
+.rulesLink:visited {
+    text-decoration: none;
+    color: aliceblue;
+} 
+.startDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.start-button{
+    font-family: 'Gothic Era', sans-serif;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background-color: #1c1c1c;
+    color: #fff;
+    text-shadow: #4CBB17 0px 5px 15px;
+    font-size: 2rem;
+}
+.start-button:hover{
+    box-shadow: #4CBB17 0px 5px 15px, rgb(10, 10, 10) 5px 5px 50px 0px inset;
+    scale: 0.9;
+}
+.dark-mode-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dark-mode-label{
+    color: aliceblue;
+    font-size: 2rem;
+    text-shadow: #4CBB17 0px 5px 15px;
+}
+.dark-mode{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url("../assets/images/sun-icon.png");
+    background-size: cover;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.dark-mode-on{
+    background-image: url("../assets/images/moon-icon.png");
+    background-size: cover;
+    cursor: pointer;
+}
+.gun-toggle-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.gun-toggle-label{
+    color: aliceblue;
+    font-size: 2rem;
+    text-shadow: #4CBB17 0px 5px 15px;
+}
+.gun-toggle{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    background-image: url("../assets/images/crosshair.png");
+    background-size: contain;
+    transition: all 0.3s ease;
+}
+.gun-toggle-off{
+    background-image: url("../assets/images/no-crosshair.png");
+    background-size: cover;
+    cursor: pointer;
+}
+.flicker-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.flicker-label{
+    color: aliceblue;
+    font-size: 2rem;
+    text-shadow: #4CBB17 0px 5px 15px;
+}
+.flicker-mode{
+    width:75px;
+    height: 75px;
+    cursor: pointer;
+    background-image: url("../assets/images/flicker-on.png");
+    background-size: cover;
+    transition: all 0.3s ease;
+}
+.flicker-mode-on{
+    background-image: url("../assets/images/flicker-off.png");
+    background-size: cover;
+    cursor: pointer;
+}
+
+.center-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.card-container{
+    display:flex;
+    flex-wrap: wrap;
+    width: 750px;
+    height: 600px;
+    justify-content: center;
+}
+
+p{
+    width: 150px;
+    height: 150px;
+    background-image: url(../assets/images/window1.png);
+    background-size: contain;
+    cursor:crosshair;
+}
+
+.center-down{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flicker{
+    animation: flicker-animation 0.7s infinite alternate;
+}
+
+@keyframes flicker-animation {
+    0%, 50%, 100% {
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 0px 20px 10px rgb(86, 86, 86);
+    }
+    25%, 75% {
+        opacity: 0.1;
+        background-color: rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.active-zombie{
+    background-image: url(../assets/images/zomb1.png);
+    background-size: contain;
+    position: relative;
+    animation: swayZombie 0.5s infinite alternate ease-in-out;
+}
+@keyframes swayZombie {
+    0% { transform: rotate(-5deg);}
+    100% { transform: rotate(5deg);}
+}
+
+.active-human{
+    background-image: url(../assets/images/human1.png);
+    background-size: contain;
+    animation: swayZombie 0.5s infinite alternate ease-in-out;
+}
+
+.leftDiv{
+    font-family: 'Gothic Era', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    z-index:3000;
+}
+
+.info-container{
+    color:white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+#score{
+    font-size: 4rem;
+    text-shadow: #4CBB17 0px 5px 15px;
+}
+#time-left{
+    font-size: 4rem;
+    text-shadow: #4CBB17 0px 5px 15px;
+}
+#lives-left{
+    font-size: 4rem;
+    text-shadow: #4CBB17 0px 5px 15px;
+}
+.scorebox{
+    text-align: center;
+    text-shadow: #4CBB17 0px 5px 15px;
+}
+.timebox{
+    text-align: center;
+    text-shadow: #4CBB17 0px 5px 15px;
+}
+.livebox{
+    text-align: center;
+    text-shadow: #4CBB17 0px 5px 15px;
+}
+
+.left-space{
+    width: 10px;
+}
+
+.right-space{
+    width: 10px;
+}
+
+@keyframes red-flash {
+    0% { background-color: rgba(255, 0, 0, 0.7); }
+    50% { background-color: rgba(255, 0, 0, 0); }
+    100% { background-color: rgba(255, 0, 0, 0); }
+}
+
+.red-flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0);
+    pointer-events: none; 
+    animation: red-flash 0.5s ease-in-out;
+    z-index: 1000; 
+}
+
+@keyframes shake {
+    0% { transform: translate(2px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(0px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(2px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(2px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake-effect {
+    animation: shake 0.5s ease-in-out;
+    animation-iteration-count: 1; 
+}
+
+.jumpscare-zombie {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    z-index:-1;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.zombie-visible {
+    z-index: 2000;
+    opacity: 0.9;
+}
+.jumpscare-zombie-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    z-index:-1;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.zombie-visible-2 {
+    z-index: 2000;
+    opacity: 0.9;
+}
+
+.jumpscare-zombie-3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    z-index:-1;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.zombie-visible-3 {
+    z-index: 2000;
+    opacity: 0.9;
+}
+
+.fog-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.visible-area {
+    position: absolute;
+    background-size: cover;
+    width: 165px;
+    height: 200px;
+    border-radius: 50px;
+    background-color: transparent;
+    box-shadow: 0 0 0 10000px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    z-index: 11;
+}
+
+.gun-element{
+    background-image: url("../assets/images/GunIcon2.png");
+    background-size: cover;
+    position: absolute;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    opacity: 0.8;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 4011;
+}
+
+.texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9;
+    background-image: url('../assets/images/texture-3.jpg');
+    background-size: cover;
+    opacity: 0.2;
+}
+
+.game-over-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; 
+    visibility: hidden; 
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.game-over-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.game-over-content {
+    text-align: center;
+    color: #fff;
+    width: 60%;
+    background-image: url("../assets/images/gameOverBg.jpg");
+    background-size: cover;
+    opacity: 0.9;
+    padding: 100px 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+.game-over-content h1 {
+    font-family: 'Gothic Era', sans-serif;
+    letter-spacing: 6px;
+    font-size: 6rem;
+    margin-bottom: 40px;
+    color: #8b0000;
+    text-shadow: 0 0 30px rgba(212, 53, 53, 1), 0 0 60px rgba(255, 0, 0, 0.7);
+}
+
+#final-score {
+    font-family: 'Gothic Era', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: #4CBB17 0px 5px 15px;
+}
+
+.restart-button {
+    font-family: 'Gothic Era', sans-serif;
+    padding: 20px 40px;
+    font-size: 2rem;
+    background-color: #1c1c1c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: #4CBB17 0px 5px 15px;
+}
+
+.restart-button:hover {
+    box-shadow: #4CBB17 0px 5px 15px, rgb(10, 10, 10) 5px 5px 50px 0px inset;
+    scale: 0.9;
+}
